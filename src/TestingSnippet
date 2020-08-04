@@ -1,0 +1,17 @@
+//Memento
+    var editor = new Editor();
+    var history = new History();
+    editor.Title = "1";
+    editor.Content = "a";
+    history.push(editor.createMemento());
+
+    editor.Title = "2";
+    editor.Content = "b";
+    history.push(editor.createMemento());
+
+
+    editor.Title = "3";
+    editor.Content = "c";
+    history.push(editor.createMemento());
+
+    editor.restore(history.pop());

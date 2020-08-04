@@ -7,6 +7,7 @@ namespace DesignPatternExc
         static void Main(string[] args)
         {
             
+
         }
     }
 }

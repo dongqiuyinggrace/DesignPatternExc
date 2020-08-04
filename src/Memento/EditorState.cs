@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPatternDemos
+namespace DesignPatternExc
 {
     class EditorState
     {
