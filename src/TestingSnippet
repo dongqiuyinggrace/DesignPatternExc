@@ -15,3 +15,9 @@
     history.push(editor.createMemento());
 
     editor.restore(history.pop());
+
+//StatePattern
+    var canvas = new Canvas();
+    canvas.setCurrentTool(new EraserTool());
+    canvas.MouseDown();
+    canvas.MouseUp();
