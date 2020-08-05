@@ -34,3 +34,8 @@
         System.Console.WriteLine(iterator.current());
         iterator.next();
     }
+
+//Strategy
+    var imageStorage = new ImageStorage();
+    imageStorage.Store("fileName: a", new JpgCompressor(), new BWFilter());
+    imageStorage.Store("fileName: b", new PngCompressor(), new ContrastFilter());
