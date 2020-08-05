@@ -21,3 +21,16 @@
     canvas.setCurrentTool(new EraserTool());
     canvas.MouseDown();
     canvas.MouseUp();
+
+//IteratorPattern
+    var history = new BrowseHistory();
+    history.push("a");
+    history.push("b");
+    history.push("c");
+
+    Iterator iterator = history.createIterator();
+    while(iterator.hasNext()) 
+    {
+        System.Console.WriteLine(iterator.current());
+        iterator.next();
+    }
