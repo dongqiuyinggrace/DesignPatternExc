@@ -45,3 +45,23 @@
     transferMoneyTask.Execute();
     var generateTask = new GenerateReport();
     generateTask.Execute();
+
+//CommandPattern
+    //var service = new CustomerService();
+    //var command = new AddCustomerCommand(service);
+    //var button = new Button(command);
+    // button.click();
+
+    //var commands = new CompositeCommand();
+    //commands.Add(new ResizeCommand());
+    //commands.Add(new BalckAndWhiteCommand());
+    //commands.Execute();
+
+    var history = new DesignPatternExc.src.CommandPattern.editor.History();
+    var document = new HtmlDocument("Hello World");
+    var boldCommand = new BoldCommand(history, document);
+    boldCommand.Execute();
+    System.Console.WriteLine(document.Content);
+    var undoComand = new UndoCommand(history);
+    undoComand.Execute();
+    System.Console.WriteLine(document.Content);
