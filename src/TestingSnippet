@@ -1,4 +1,4 @@
-//Memento
+//Memento(Polymorphism)
     var editor = new Editor();
     var history = new History();
     editor.Title = "1";
@@ -16,13 +16,13 @@
 
     editor.restore(history.pop());
 
-//StatePattern
+//StatePattern(Polymorphism)
     var canvas = new Canvas();
     canvas.setCurrentTool(new EraserTool());
     canvas.MouseDown();
     canvas.MouseUp();
 
-//IteratorPattern
+//IteratorPattern(Polymorphism)
     var history = new BrowseHistory();
     history.push("a");
     history.push("b");
@@ -35,7 +35,13 @@
         iterator.next();
     }
 
-//Strategy
+//Strategy(Polymorphism)
     var imageStorage = new ImageStorage();
     imageStorage.Store("fileName: a", new JpgCompressor(), new BWFilter());
     imageStorage.Store("fileName: b", new PngCompressor(), new ContrastFilter());
+
+//Template(Inheritance)
+    var transferMoneyTask = new TransferMoneyTask();
+    transferMoneyTask.Execute();
+    var generateTask = new GenerateReport();
+    generateTask.Execute();
