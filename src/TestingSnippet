@@ -65,3 +65,15 @@
     var undoComand = new UndoCommand(history);
     undoComand.Execute();
     System.Console.WriteLine(document.Content);
+
+//ObserverPattern
+    var data = new DataSource();
+    var chart = new Chart(data);
+    var sheet1 = new SpreadSheet(data);
+    var sheet2 = new SpreadSheet(data);
+    
+    data.AddObserver(chart);
+    data.AddObserver(sheet1);
+    data.AddObserver(sheet1);
+
+    data.Value = 5;
