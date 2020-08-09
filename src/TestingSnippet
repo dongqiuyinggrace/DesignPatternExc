@@ -89,3 +89,12 @@
 
     var webServer = new WebServer(authenticator);
     webServer.Handle(new HttpRequest("Admin", "1234"));
+
+//VisitorPattern
+    var headingNode = new HeadingNode();
+    var achorNode = new AchorNode();
+    var htmlDocument = new HtmlDocument();
+    htmlDocument.AddNode(headingNode);
+    htmlDocument.AddNode(achorNode);
+    htmlDocument.Execute(new PlainTextOperation());
+    htmlDocument.Execute(new HighLightOperation());
