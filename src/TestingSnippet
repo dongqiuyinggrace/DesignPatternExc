@@ -124,3 +124,14 @@
     var imageView = new ImageView(new Image());
     imageView.Apply(new CaramelFilter(new Caramel()));
     imageView.Apply(new CaramelAdapter());
+
+//DecoratorPattern
+    static void Main(string[] args)
+    {
+        StoreCreditCard(new CompressedStream(new EncryptCloudStream(new CloudStream())));
+    }
+
+    static void StoreCreditCard(IStream stream)
+    {
+        stream.Write("1234-1234-1234");
+    }
