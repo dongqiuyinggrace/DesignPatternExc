@@ -135,3 +135,8 @@
     {
         stream.Write("1234-1234-1234");
     }
+
+//FacadePattern
+    var service = new NotificationService();
+    service.Send("Hello World", "target");
+
