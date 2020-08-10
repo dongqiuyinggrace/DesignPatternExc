@@ -119,3 +119,8 @@
     group.Add(group2);
     group.Render();
     group.Move();
+
+//AdapterPattern
+    var imageView = new ImageView(new Image());
+    imageView.Apply(new CaramelFilter(new Caramel()));
+    imageView.Apply(new CaramelAdapter());
