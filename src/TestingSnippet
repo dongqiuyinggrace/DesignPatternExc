@@ -140,3 +140,9 @@
     var service = new NotificationService();
     service.Send("Hello World", "target");
 
+//FlyweightPattern
+    var pointService = new PointService(new PointIconFactory());
+    foreach(var point in pointService.GetPoints())
+    {
+        point.Draw();
+    }
