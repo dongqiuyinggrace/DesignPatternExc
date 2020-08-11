@@ -156,3 +156,13 @@
     var control = new RemoteControl(new SamsungTv());
     control.TurnOn();
     control.TurnOff();
+
+//ProxyPattern
+    var library = new Library();
+    string[] fileNames = {"a", "b", "c"};
+    foreach(var fileName in fileNames)
+    {
+        library.Add(new EbookLoggingProxy(fileName));
+    }
+    library.OpenEbook("a");
+    library.OpenEbook("b");
