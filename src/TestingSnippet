@@ -146,3 +146,13 @@
     {
         point.Draw();
     }
+
+//BridgePattern
+    var remoteControl = new AdvancedRemoteControl(new SonyTv());
+    remoteControl.TurnOn();
+    remoteControl.SetChannel(5);
+    remoteControl.TurnOff();
+
+    var control = new RemoteControl(new SamsungTv());
+    control.TurnOn();
+    control.TurnOff();
