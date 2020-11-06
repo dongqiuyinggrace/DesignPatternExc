@@ -166,3 +166,17 @@
     }
     library.OpenEbook("a");
     library.OpenEbook("b");
+
+//Singleton Pattern
+    SingleObject singleObject = SingleObject.GetInstance();
+    singleObject.ShowMessage();
+
+//Abstract factory
+    var shapeFactory = ShapeFactoryGenerator.GetFactory(true);  //rounded
+    var shape = shapeFactory.GetShape("Square");
+    shape.Draw();
+
+//Factory pattern
+    var shapeFactory = new ShapeFactory();  
+    var shape = shapeFactory.GetShape("Square");
+    shape.Draw();
