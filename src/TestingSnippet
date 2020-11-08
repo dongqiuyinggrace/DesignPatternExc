@@ -180,3 +180,24 @@
     var shapeFactory = new ShapeFactory();  
     var shape = shapeFactory.GetShape("Square");
     shape.Draw();
+
+//Prototype Pattern
+    IStudent student = new GraduateStudent
+    {
+        Name = "Jason",
+        Age = 24,
+        SchoolName = "BBUA"
+    };
+
+    var student2 = (GraduateStudent)student.Clone();
+    student2.ShowMessage();
+
+    IStudent udstudent = new UnderGraduateStudent
+    {
+        Name = "Amy",
+        Age = 19,
+        SchoolName = "MIP"
+    };
+
+    var udstudent2 = (UnderGraduateStudent)udstudent.Clone();
+    udstudent2.ShowMessage();
